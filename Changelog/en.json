@@ -164,5 +164,18 @@
         ],
         "version_label": "VERSION INFORMATION",
         "version_value": "v1.0.7 Official"
+    },
+    "v1.0.8 Official": {
+        "title": "HYPERLIS - Changelog v1.0.8 Official",
+        "summary_title": "RELEASE SUMMARY",
+        "content": [
+            "Software rebranding: Personalized for Việt.HVQ - I.T department.",
+            "Integrated automated build and packaging script (build.bat).",
+            "Configured auto-update endpoint to official GitHub repository.",
+            "Removed all old donation links, QR codes, and fanpage references.",
+            "Updated high-speed WinPE download URL for WSAP deployment."
+        ],
+        "version_label": "VERSION INFORMATION",
+        "version_value": "v1.0.8 Official"
     }
 }

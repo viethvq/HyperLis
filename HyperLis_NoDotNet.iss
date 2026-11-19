@@ -1,8 +1,8 @@
 ; HyperLis Inno Setup Script
-; Generates HyperLis_Official_1.0.7.exe
+; Generates HyperLis_Official_1.0.8.exe
 
 #define MyAppName "HyperLis"
-#define MyAppVersion "Official 1.0.7"
+#define MyAppVersion "Official 1.0.8"
 #define MyAppPublisher "Việt.HVQ - I.T department"
 #define MyAppExeName "HyperLis.exe"
 
@@ -17,7 +17,7 @@ DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
 ; Allow user to change install directory even for portable
 DisableDirPage=no 
-OutputBaseFilename=HyperLis_Setup_v1.0.7_NoDotNet
+OutputBaseFilename=HyperLis_Setup_v1.0.8_NoDotNet
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern

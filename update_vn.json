@@ -1,16 +1,14 @@
 {
-  "version": "1.0.7",
-  "release_date": "05-11-2026",
-  "download_url_setup": "",
+  "version": "1.0.8",
+  "release_date": "19-11-2026",
+  "download_url_setup": "https://github.com/viethvq/HyperLis/releases/download/v1.0.8/HyperLis_Setup_v1.0.8_NoDotNet.exe",
   "content": [
-            "Chỉnh sửa giao diện Dashboard, Quản lý bản quyền, UWP Apps ",
-            "Cập nhật thuật toán Tối ưu mới cho Gaming",
-            "Cập nhật và bổ sung thêm tính năng mới cho WSAP",
-            "Tối ưu lại toàn bộ thuật toán trong WSAP, khắc phục một số lỗi còn tồn đọng, hỗ trợ đầy đủ: Unattend và Driver.",
-            "Chỉnh sửa lại thuật toán WSAP: Tự động phát hiện Bitlocker và Secure Boot",
-            "Chỉnh sửa lại thuật toán của UWP Apps",
-            "Sửa lỗi thuật toán tối ưu cho Gaming làm đen nền Explorer trên Windows 25H2, 26H2 gây lag máy"
-        ],
-  "size": "114 MB",
+    "Cá nhân hóa phần mềm: Nhận diện thương hiệu Việt.HVQ - I.T department.",
+    "Tích hợp script tự động build và đóng gói installer (build.bat).",
+    "Cấu hình lại endpoint Check Update trỏ về GitHub chính thức.",
+    "Loại bỏ hoàn toàn các liên kết donate, mã QR và fanpage cũ.",
+    "Cập nhật link tải WinPE tốc độ cao phục vụ tính năng WSAP."
+  ],
+  "size": "97 MB",
   "is_critical": false
 }

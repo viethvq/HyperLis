@@ -1,16 +1,14 @@
 {
-  "version": "1.0.7",
-  "release_date": "05-11-2026",
-  "download_url_setup": "",
+  "version": "1.0.8",
+  "release_date": "19-11-2026",
+  "download_url_setup": "https://github.com/viethvq/HyperLis/releases/download/v1.0.8/HyperLis_Setup_v1.0.8_NoDotNet.exe",
   "content": [
-            "Refined UI for Dashboard, License Management, and UWP Apps.",
-            "Updated new optimization algorithm for Gaming.",
-            "Updated and added new features to WSAP.",
-            "Re-optimized all algorithms in WSAP, resolved remaining issues, and provided full support for Unattend and Drivers.",
-            "Updated WSAP algorithm: Automatically detects BitLocker and Secure Boot.",
-            "Improved the algorithm for UWP Apps.",
-            "Fixed an issue where the Gaming optimization algorithm caused a black background in File Explorer on Windows 25H2 and 26H2, causing system lag."
-        ],
-  "size": "114 MB",
+    "Software rebranding: Personalized for Việt.HVQ - I.T department.",
+    "Integrated automated build and packaging script (build.bat).",
+    "Configured auto-update endpoint to official GitHub repository.",
+    "Removed all old donation links, QR codes, and fanpage references.",
+    "Updated high-speed WinPE download URL for WSAP deployment."
+  ],
+  "size": "97 MB",
   "is_critical": false
 }

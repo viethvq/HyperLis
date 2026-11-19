@@ -163,5 +163,18 @@
         ],
         "version_label": "THÔNG TIN PHIÊN BẢN",
         "version_value": "v1.0.7 Chính thức"
+    },
+    "v1.0.8 Chính thức": {
+        "title": "HYPERLIS - Nhật ký thay đổi v1.0.8 Chính thức",
+        "summary_title": "TÓM TẮT PHÁT HÀNH",
+        "content": [
+            "Cá nhân hóa phần mềm: Nhận diện thương hiệu Việt.HVQ - I.T department.",
+            "Tích hợp script tự động build và đóng gói installer (build.bat).",
+            "Cấu hình lại endpoint Check Update trỏ về GitHub chính thức.",
+            "Loại bỏ hoàn toàn các liên kết donate, mã QR và fanpage cũ.",
+            "Cập nhật link tải WinPE tốc độ cao phục vụ tính năng WSAP."
+        ],
+        "version_label": "THÔNG TIN PHIÊN BẢN",
+        "version_value": "v1.0.8 Chính thức"
     }
 }

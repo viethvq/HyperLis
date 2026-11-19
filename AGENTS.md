@@ -122,3 +122,11 @@ Dự án đã được cá nhân hóa toàn diện từ source code gốc (`ZitT
    - **Tôn trọng logic cũ:** Tuyệt đối không tự ý thay đổi cấu trúc dữ liệu, luồng tối ưu hệ thống trong `Helpers/HyperLisOptimization.cs` hoặc `Helpers/OptimizationHelper.cs`.
    - **Quy tắc Git:** Không tự ý `git push` hay `git pull` lên remote repository nếu chưa có sự đồng ý của người dùng.
    - **Quy tắc biên dịch:** Luôn chỉ định rõ Runtime Identifier `-r win-x64` khi restore/publish vì ứng dụng tích hợp các thư viện native và cấu hình `net9.0-windows`.
+
+3. **Quy chuẩn Kỹ thuật & Kịch bản Script:**
+   - **Batch script (.bat):** Tuyệt đối không dùng vòng lặp `for` lồng biến `%ProgramFiles(x86)%` vì dấu ngoặc `()` làm hỏng cú pháp `cmd.exe` (`Setup was unexpected at this time`). Sử dụng các khối `if exist "..."` tuần tự riêng biệt.
+   - **PowerShell:** Môi trường mặc định là PowerShell 5.1, không dùng toán tử `&&`. Dùng dấu `;` hoặc tách từng câu lệnh riêng lẻ.
+
+4. **Quy trình Cập nhật & Hai tầng Changelog:**
+   - **Tầng 1 - Changelog Local (Offline):** `Changelog/vn.json` & `Changelog/en.json` - Phải cập nhật trước khi chạy `build.bat` để đóng gói vào bộ cài; hiển thị trong `ChangelogWindow` từ Dashboard.
+   - **Tầng 2 - Changelog Online:** `update_vn.json` & `update_en.json` - Cập nhật trên GitHub sau khi tạo Release; hiển thị trên popup `UpdateWindow` khi người dùng bấm Check Update.

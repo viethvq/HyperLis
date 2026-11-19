@@ -26,9 +26,9 @@ Dự án đã được cá nhân hóa toàn diện từ source code gốc (`ZitT
 - **Website chính thức:** `https://viethvq.name.vn`
 - **Mạng xã hội:** Đã loại bỏ hoàn toàn các liên kết Facebook của tác giả cũ.
 - **Quyên góp & Ngân hàng (Donation/Bank):** Đã loại bỏ hoàn toàn mã QR barcode (`Images/QR.jpg`) và số tài khoản ngân hàng `MBBANK: MDUCIT168` khỏi giao diện Settings và Description panel.
-- **GitHub Repository:** Hiện đang để trống hằng số chờ cập nhật sau (`GITHUB_REPO_URL = ""`).
-- **Cập nhật tự động (Auto-Update):** Đã vô hiệu hóa endpoint tự động kéo update từ repo `ZitTechLab` để tránh việc ứng dụng tự tải bản gốc ghi đè lên bản cá nhân hóa.
-- **Git Remote:** Đã gỡ bỏ remote `origin` cũ (`ZitTechLab/HyperLis`). Repository hiện hoàn toàn độc lập, sẵn sàng để gán remote mới và push lên GitHub cá nhân.
+- **GitHub Repository:** `https://github.com/viethvq/HyperLis`
+- **Cập nhật tự động (Auto-Update):** Đã trỏ endpoint cập nhật về repo cá nhân (`raw.githubusercontent.com/viethvq/HyperLis/main/...`).
+- **Git Remote:** `origin` -> `https://github.com/viethvq/HyperLis.git` (branch `main`).
 
 ---
 

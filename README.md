@@ -50,26 +50,38 @@ Dự án đã tích hợp sẵn script tự động hóa toàn bộ quy trình:
 
 ---
 
-## 4. Hướng dẫn phát hành phiên bản mới (Release Workflow)
+## 4. Hướng dẫn phát hành phiên bản mới & Cập nhật Changelog
 
-Khi có bản cập nhật mới (ví dụ từ `v1.0.7` lên `v1.0.8`):
+Khi phát hành phiên bản mới (ví dụ từ `v1.0.7` lên `v1.0.8`), thực hiện theo các bước:
 
-1. **Build bộ cài mới:**
-   Chạy `.\build.bat` để tạo file installer trong thư mục `Output/` (ví dụ: `HyperLis_Setup_v1.0.8_NoDotNet.exe`).
-2. **Tạo Release trên GitHub:**
-   - Truy cập: `https://github.com/viethvq/HyperLis/releases/new`
-   - Đặt Tag và Title (ví dụ: `v1.0.8`).
-   - Đính kèm file installer vừa tạo vào mục Attach binaries.
-   - Bấm **Publish release**.
-3. **Lấy link tải file cài đặt:**
-   Sao chép link tải trực tiếp của file `.exe` vừa tải lên mục Release (ví dụ: `https://github.com/viethvq/HyperLis/releases/download/v1.0.8/HyperLis_Setup_v1.0.8_NoDotNet.exe`).
-4. **Cập nhật 2 file JSON trên repo:**
-   Mở `update_en.json` và `update_vn.json`:
-   - Sửa `"version": "1.0.8"`
-   - Dán link tải vào `"download_url_setup"`
-   - Viết các gạch đầu dòng tính năng mới vào mục `"content"`
-5. **Commit & Push lên nhánh main:**
-   Sau khi push, người dùng ứng dụng nhấn **Check Update** sẽ lập tức nhận diện và tự tải bản `v1.0.8` về cài đặt.
+### Bước 1: Cập nhật Changelog lịch sử (Local)
+Trước khi đóng gói bộ cài, cập nhật danh sách tính năng mới vào 2 file JSON lịch sử để hiển thị trong cửa sổ **Dashboard > Changelog**:
+- Mở `Changelog/vn.json` và `Changelog/en.json`.
+- Thêm block phiên bản mới (ví dụ `"v1.0.8 Chính thức"`) kèm danh sách nội dung thay đổi (`"content"`).
+- *(Tùy chọn)* Cập nhật số Version trong file `HyperLisUI.csproj` (`<Version>1.0.8</Version>`).
+
+### Bước 2: Build bộ cài mới
+Chạy script tự động trong PowerShell/CMD:
+```cmd
+.\build.bat
+```
+File cài đặt mới sẽ được tạo trong thư mục `Output/` (ví dụ: `HyperLis_Setup_v1.0.8_NoDotNet.exe`).
+
+### Bước 3: Tạo Release trên GitHub
+1. Truy cập: [https://github.com/viethvq/HyperLis/releases/new](https://github.com/viethvq/HyperLis/releases/new)
+2. Nhập Tag và Title: `v1.0.8`.
+3. Đính kèm file installer vừa tạo trong thư mục `Output/`.
+4. Nhấn **Publish release**.
+5. Chuột phải vào file `.exe` vừa upload trong Release, chọn **Copy link address** (đây là link tải trực tiếp).
+
+### Bước 4: Cập nhật Changelog Online (Kích hoạt Auto-Update)
+Mở 2 file `update_en.json` và `update_vn.json`:
+- Đổi `"version": "1.0.8"`.
+- Dán link tải trực tiếp vào trường `"download_url_setup"`.
+- Viết tóm tắt các tính năng mới vào mảng `"content"` (phần này sẽ hiển thị trực tiếp trên popup của người dùng khi bấm Check Update).
+
+### Bước 5: Commit & Push lên GitHub
+Commit và đẩy các thay đổi lên nhánh `main`. Ngay lập tức người dùng đang chạy bản cũ khi bấm **Check Update** sẽ nhận được thông báo bản mới kèm nội dung Changelog online.
 
 ---
 

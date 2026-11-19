@@ -35,8 +35,8 @@ namespace HyperLisUI.Services
 
     public class UpdateService
     {
-        private const string UPDATE_EN_URL = "https://raw.githubusercontent.com/ZitTechLab/HyperLis/refs/heads/main/update_en.json";
-        private const string UPDATE_VN_URL = "https://raw.githubusercontent.com/ZitTechLab/HyperLis/refs/heads/main/update_vn.json";
+        private const string UPDATE_EN_URL = "https://raw.githubusercontent.com/viethvq/HyperLis/main/update_en.json";
+        private const string UPDATE_VN_URL = "https://raw.githubusercontent.com/viethvq/HyperLis/main/update_vn.json";
         private static readonly HttpClient _httpClient = new HttpClient();
 
         public UpdateService()
@@ -69,6 +69,8 @@ namespace HyperLisUI.Services
                 // Choose base URL by current language
                 var currentLang = LocalizationService.CurrentLanguage?.ToLower() ?? "en";
                 var baseUrl = currentLang.Contains("vn") ? UPDATE_VN_URL : UPDATE_EN_URL;
+                if (string.IsNullOrWhiteSpace(baseUrl))
+                    return null;
 
                 // To avoid cache, append timestamp
                 var url = $"{baseUrl}?t={DateTimeOffset.UtcNow.ToUnixTimeSeconds()}";

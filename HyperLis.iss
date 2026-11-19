@@ -3,9 +3,9 @@
 
 #define MyAppName "HyperLis"
 #define MyAppVersion "Official 1.0.7"
-#define MyAppPublisher "Zit's Tech Lab"
+#define MyAppPublisher "Việt.HVQ - I.T department"
 #define MyAppExeName "HyperLis.exe"
-#define MyDotNetInstaller "E:\GGAI\dotNetRuntime9.exe"
+#define MyDotNetInstaller "dotNetRuntime9.exe"
 
 
 [Setup]
@@ -34,7 +34,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 ; Main Executable and dependencies
-Source: "E:\GGAI\Design\bin\Release\net9.0-windows\win-x64\publish\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "bin\Release\net9.0-windows\win-x64\publish\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; .NET Runtime Installer (packed into setup but not copied to app dir automatically)
 ; .NET Runtime Installer (packed into setup but not copied to app dir automatically)
 Source: "{#MyDotNetInstaller}"; DestDir: "{tmp}"; Flags: dontcopy

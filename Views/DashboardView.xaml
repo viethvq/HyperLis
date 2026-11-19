@@ -310,37 +310,16 @@
                 <RowDefinition Height="*"/>    <!-- Row 2: 2-Column Dashboard Grid -->
             </Grid.RowDefinitions>
 
-            <!-- ROW 0: 3 TOP LINK CARDS (FB, GITHUB, WEBSITE) -->
+            <!-- ROW 0: 2 TOP LINK CARDS (GITHUB, WEBSITE) -->
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="12"/>
                     <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="12"/>
-                    <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <!-- CARD 1: FACEBOOK -->
-                <Border Grid.Column="0" Style="{StaticResource TopLinkCardStyle}" MouseLeftButtonUp="FacebookCard_Click">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Border Grid.Column="0" Width="42" Height="42" CornerRadius="10" Background="#EFF6FF" VerticalAlignment="Center" Margin="0,0,14,0">
-                            <Image Source="pack://application:,,,/Images/fb.png" Width="22" Height="22" HorizontalAlignment="Center" VerticalAlignment="Center" RenderOptions.BitmapScalingMode="HighQuality"/>
-                        </Border>
-                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                            <TextBlock x:Name="lblFacebookTitle" Text="Facebook" FontSize="14.5" FontWeight="SemiBold" Foreground="#0F172A"/>
-                            <TextBlock x:Name="lblFacebookDesc" Text="Cộng đồng Zịt's Tech Lab" FontSize="12" Foreground="#64748B" TextTrimming="CharacterEllipsis" Margin="0,1,0,0"/>
-                        </StackPanel>
-                        <TextBlock Grid.Column="2" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Text="&#xE76C;" FontSize="12" Foreground="#94A3B8" VerticalAlignment="Center" Margin="6,0,0,0"/>
-                    </Grid>
-                </Border>
-
-                <!-- CARD 2: GITHUB -->
-                <Border Grid.Column="2" Style="{StaticResource TopLinkCardStyle}" MouseLeftButtonUp="GithubCard_Click">
+                <!-- CARD 1: GITHUB -->
+                <Border Grid.Column="0" Style="{StaticResource TopLinkCardStyle}" MouseLeftButtonUp="GithubCard_Click">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
@@ -359,8 +338,8 @@
                     </Grid>
                 </Border>
 
-                <!-- CARD 3: WEBSITE -->
-                <Border Grid.Column="4" Style="{StaticResource TopLinkCardStyle}" MouseLeftButtonUp="WebsiteCard_Click">
+                <!-- CARD 2: WEBSITE -->
+                <Border Grid.Column="2" Style="{StaticResource TopLinkCardStyle}" MouseLeftButtonUp="WebsiteCard_Click">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
@@ -372,7 +351,7 @@
                         </Border>
                         <StackPanel Grid.Column="1" VerticalAlignment="Center">
                             <TextBlock x:Name="lblWebsiteTitle" Text="Website" FontSize="14.5" FontWeight="SemiBold" Foreground="#0F172A"/>
-                            <TextBlock x:Name="lblWebsiteDesc" Text="Trang chủ chính thức HyperLis" FontSize="12" Foreground="#64748B" TextTrimming="CharacterEllipsis" Margin="0,1,0,0"/>
+                            <TextBlock x:Name="lblWebsiteDesc" Text="viethvq.name.vn — Việt.HVQ - I.T department" FontSize="12" Foreground="#64748B" TextTrimming="CharacterEllipsis" Margin="0,1,0,0"/>
                         </StackPanel>
                         <TextBlock Grid.Column="2" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Text="&#xE76C;" FontSize="12" Foreground="#94A3B8" VerticalAlignment="Center" Margin="6,0,0,0"/>
                     </Grid>

@@ -57,29 +57,25 @@ namespace HyperLisUI.Views
             LoadCurrentVersion(); // Refresh version string translation
         }
 
-        private void LeMinhDuc_Click(object sender, RoutedEventArgs e)
+        private const string WEBSITE_URL = "https://viethvq.name.vn";
+        private const string GITHUB_REPO_URL = "https://github.com/viethvq/HyperLis";
+
+        private void WebsiteButton_Click(object sender, RoutedEventArgs e)
         {
-            OpenUrl("https://www.facebook.com/why.not.Zit");
+            OpenUrl(WEBSITE_URL);
         }
 
-        private void TuanHai_Click(object sender, RoutedEventArgs e)
+        private void WebsiteLink_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            OpenUrl("https://www.facebook.com/tuanhaii26");
-        }
-
-        private void ZitTechLab_Click(object sender, RoutedEventArgs e)
-        {
-            OpenUrl("https://www.facebook.com/ZitTechLab");
-        }
-
-        private void FacebookLink_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            OpenUrl("https://www.facebook.com/ZitTechLab");
+            OpenUrl(WEBSITE_URL);
         }
 
         private void GithubLink_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            OpenUrl("https://github.com/ZitTechLab/HyperLis");
+            if (!string.IsNullOrWhiteSpace(GITHUB_REPO_URL))
+            {
+                OpenUrl(GITHUB_REPO_URL);
+            }
         }
 
         private void LoadCurrentVersion()

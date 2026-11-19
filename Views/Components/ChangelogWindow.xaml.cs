@@ -218,14 +218,19 @@ namespace HyperLisUI.Views.Components
             Close();
         }
 
+        private const string GITHUB_RELEASES_URL = "https://github.com/viethvq/HyperLis/releases";
+
         private void GitHubReleases_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Process.Start(new ProcessStartInfo("https://github.com/ZitTechLab/HyperLis/releases")
+                if (!string.IsNullOrWhiteSpace(GITHUB_RELEASES_URL))
                 {
-                    UseShellExecute = true
-                });
+                    Process.Start(new ProcessStartInfo(GITHUB_RELEASES_URL)
+                    {
+                        UseShellExecute = true
+                    });
+                }
             }
             catch { }
         }

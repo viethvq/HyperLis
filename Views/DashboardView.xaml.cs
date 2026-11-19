@@ -43,6 +43,8 @@ namespace HyperLisUI.Views
 
 #pragma warning disable CS0169, CS0649
         // Backing stubs for removed UI elements to preserve code-behind compatibility
+        private readonly TextBlock? lblFacebookTitle = null;
+        private readonly TextBlock? lblFacebookDesc = null;
         private readonly TextBlock? lblGreetingTime = null;
         private readonly TextBlock? lblWelcome = null;
         private readonly TextBlock? lblSystemHealth = null;
@@ -1550,20 +1552,17 @@ namespace HyperLisUI.Views
             }
         }
 
-        private void FacebookCard_Click(object sender, MouseButtonEventArgs e)
-        {
-            try
-            {
-                Process.Start(new ProcessStartInfo("https://www.facebook.com/ZitTechLab") { UseShellExecute = true });
-            }
-            catch { }
-        }
+        private const string GITHUB_REPO_URL = "https://github.com/viethvq/HyperLis";
+        private const string WEBSITE_URL = "https://viethvq.name.vn";
 
         private void GithubCard_Click(object sender, MouseButtonEventArgs e)
         {
             try
             {
-                Process.Start(new ProcessStartInfo("https://github.com/ZitTechLab/HyperLis") { UseShellExecute = true });
+                if (!string.IsNullOrWhiteSpace(GITHUB_REPO_URL))
+                {
+                    Process.Start(new ProcessStartInfo(GITHUB_REPO_URL) { UseShellExecute = true });
+                }
             }
             catch { }
         }
@@ -1572,7 +1571,7 @@ namespace HyperLisUI.Views
         {
             try
             {
-                Process.Start(new ProcessStartInfo("https://zittechlab.com/") { UseShellExecute = true });
+                Process.Start(new ProcessStartInfo(WEBSITE_URL) { UseShellExecute = true });
             }
             catch { }
         }
@@ -1801,7 +1800,7 @@ namespace HyperLisUI.Views
                 var fbTitle = LocalizationService.Get("lblFacebookTitle");
                 if (lblFacebookTitle != null) lblFacebookTitle.Text = (!string.IsNullOrEmpty(fbTitle) && fbTitle != "lblFacebookTitle") ? fbTitle : "Facebook";
                 var fbDesc = LocalizationService.Get("lblFacebookDesc");
-                if (lblFacebookDesc != null) lblFacebookDesc.Text = (!string.IsNullOrEmpty(fbDesc) && fbDesc != "lblFacebookDesc") ? fbDesc : "Zịt's Tech Lab Community";
+                if (lblFacebookDesc != null) lblFacebookDesc.Text = (!string.IsNullOrEmpty(fbDesc) && fbDesc != "lblFacebookDesc") ? fbDesc : "Việt.HVQ - I.T department";
 
                 var ghTitle = LocalizationService.Get("lblGithubTitle");
                 if (lblGithubTitle != null) lblGithubTitle.Text = (!string.IsNullOrEmpty(ghTitle) && ghTitle != "lblGithubTitle") ? ghTitle : "GitHub Repository";
@@ -1811,7 +1810,7 @@ namespace HyperLisUI.Views
                 var wsTitle = LocalizationService.Get("lblWebsiteTitle");
                 if (lblWebsiteTitle != null) lblWebsiteTitle.Text = (!string.IsNullOrEmpty(wsTitle) && wsTitle != "lblWebsiteTitle") ? wsTitle : "Website";
                 var wsDesc = LocalizationService.Get("lblWebsiteDesc");
-                if (lblWebsiteDesc != null) lblWebsiteDesc.Text = (!string.IsNullOrEmpty(wsDesc) && wsDesc != "lblWebsiteDesc") ? wsDesc : "Official HyperLis homepage";
+                if (lblWebsiteDesc != null) lblWebsiteDesc.Text = (!string.IsNullOrEmpty(wsDesc) && wsDesc != "lblWebsiteDesc") ? wsDesc : "viethvq.name.vn — Việt.HVQ - I.T department";
 
                 var perfTracker = LocalizationService.Get("lblSystemPerformance");
                 if (lblPerfTracker != null) lblPerfTracker.Text = (!string.IsNullOrEmpty(perfTracker) && perfTracker != "lblSystemPerformance") ? perfTracker : "System Performance";

@@ -171,8 +171,7 @@
                          <Image Source="pack://application:,,,/Images/hyperlis.png" Width="38" Height="38" Margin="0,0,10,0" VerticalAlignment="Center"/>
                          <StackPanel VerticalAlignment="Center">
                             <TextBlock Text="HyperLis" FontSize="22" FontWeight="SemiBold" Margin="0,0,0,0"/>
-                            <!-- <TextBlock Text="© Zịt's Tech Lab" FontSize="11" Foreground="#808080" Margin="1,3,0,0" FontWeight="Regular"/> -->
-                            <!-- <TextBlock Text="Lê Minh Đức" FontSize="11" Foreground="#808080" Margin="12,0,0,0" FontWeight="Regular"/> -->
+                            <TextBlock Text="© Việt.HVQ - I.T department" FontSize="11" Foreground="#808080" Margin="1,2,0,0" FontWeight="Regular"/>
                          </StackPanel>
                     </StackPanel>
 

@@ -495,7 +495,7 @@ namespace HyperLisUI.Views
 
         private void BtnSupport_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start(new ProcessStartInfo("https://www.facebook.com/ZitTechLab") { UseShellExecute = true });
+            Process.Start(new ProcessStartInfo("https://viethvq.name.vn") { UseShellExecute = true });
         }
 
         private async void BtnRemoveWinHWID_Click(object sender, RoutedEventArgs e)

@@ -3,7 +3,7 @@
 
 #define MyAppName "HyperLis"
 #define MyAppVersion "Official 1.0.7"
-#define MyAppPublisher "Zit's Tech Lab"
+#define MyAppPublisher "Việt.HVQ - I.T department"
 #define MyAppExeName "HyperLis.exe"
 
 [Setup]
@@ -32,7 +32,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 ; Main Executable and dependencies
-Source: "E:\GGAI\Design\bin\Release\net9.0-windows\win-x64\publish\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "bin\Release\net9.0-windows\win-x64\publish\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

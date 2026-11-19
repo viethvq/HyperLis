@@ -312,7 +312,7 @@ public partial class MainWindow : Window
 
     private void SettingsButton_Click(object sender, RoutedEventArgs e)
     {
-         UpdateView(SettingsView, SettingsDescriptionView, false);
+         UpdateView(SettingsView, null, true);
     }
 
     private void GlobalRestart_Click(object sender, RoutedEventArgs e)

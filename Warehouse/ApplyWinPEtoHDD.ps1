@@ -1,4 +1,4 @@
-﻿# ================== ELEVATE ADMIN ==================
+# ================== ELEVATE ADMIN ==================
 # Neu chua chay quyen admin thi tu mo lai voi quyen admin
 if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     $arguments = "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`""
@@ -296,7 +296,7 @@ if ($XDriveExists) {
 # 2) Dam bao ISO: WinPEFolder\winpe.iso
 $isoDir  = Join-Path $scriptDir 'WinPEFolder'
 $isoPath = Join-Path $isoDir  'winpe.iso'
-$downloadUrl = 'https://github.com/ZitTechLab/WSAP/releases/download/ver1.0.7/winpe.iso'
+$downloadUrl = 'https://github.com/viethvq/WSAP/releases/download/ver1.0.7/winpe.iso'
 
 $candidateIsoPaths = @(
     $isoPath,

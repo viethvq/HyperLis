@@ -192,15 +192,20 @@ namespace HyperLisUI.Views.Components
             this.Close();
         }
 
+        private const string GITHUB_RELEASES_URL = "https://github.com/viethvq/HyperLis/releases";
+
         private void ViewChangelogLink_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Process.Start(new ProcessStartInfo
+                if (!string.IsNullOrWhiteSpace(GITHUB_RELEASES_URL))
                 {
-                    FileName = "https://github.com/ZitTechLab/HyperLis/releases",
-                    UseShellExecute = true
-                });
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = GITHUB_RELEASES_URL,
+                        UseShellExecute = true
+                    });
+                }
             }
             catch { }
         }

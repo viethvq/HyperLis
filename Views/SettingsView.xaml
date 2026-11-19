@@ -87,8 +87,7 @@
                 <TextBlock Text="Date: 22/11/2025" FontSize="14" Foreground="#555" Margin="0,0,0,15"/>
 
                 <TextBlock x:Name="lblLinks" Text="Links:" FontWeight="Bold" FontSize="15" Margin="0,0,0,5"/>
-                <TextBlock Text="https://www.facebook.com/ZitTechLab" FontSize="14" Foreground="#0066CC" Cursor="Hand" TextDecorations="Underline" Margin="0,0,0,5" MouseLeftButtonUp="FacebookLink_Click"/>
-                <TextBlock Text="https://github.com/ZitTechLab/HyperLis" FontSize="14" Foreground="#0066CC" Cursor="Hand" TextDecorations="Underline" Margin="0,0,0,15" MouseLeftButtonUp="GithubLink_Click"/>
+                <TextBlock Text="https://viethvq.name.vn" FontSize="14" Foreground="#0066CC" Cursor="Hand" TextDecorations="Underline" Margin="0,0,0,15" MouseLeftButtonUp="WebsiteLink_Click"/>
 
                 <TextBlock x:Name="lblThirdPartyLibs" Text="Third-party Libraries:" FontWeight="Bold" FontSize="15" Margin="0,0,0,5"/>
                 <TextBlock Text="wpfui" FontSize="14" Foreground="#555"/>
@@ -97,27 +96,15 @@
             <!-- About Us -->
             <TextBlock x:Name="lblAboutUs" Text="About us" FontSize="28" FontWeight="SemiBold" Margin="0,0,0,15"/>
             <StackPanel Margin="0,0,0,30">
-                <TextBlock x:Name="lblDeveloperInfo" Text="Developed by Lê Minh Đức (HCMUTE) and Tuấn Hải (HUTECH)." FontWeight="Bold" FontSize="15" Margin="0,0,0,5"/>
+                <TextBlock x:Name="lblDeveloperInfo" Text="Developed by Việt.HVQ - I.T department." FontWeight="Bold" FontSize="15" Margin="0,0,0,5"/>
                 <TextBlock x:Name="lblDeveloperDesc" Text="Born from our own struggles with laptop and PC performance, this tool was built to help others boost their PCs and enjoy smoother experiences." 
                            FontSize="14" Foreground="#555" TextWrapping="Wrap" Margin="0,0,0,15"/>
 
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <Button Click="LeMinhDuc_Click" Style="{StaticResource ActionButtonStyle}" Width="180" Height="42" Margin="0,0,20,0" Padding="0" Background="White" BorderThickness="1" BorderBrush="#EEEEEE" VerticalAlignment="Center">
+                    <Button Click="WebsiteButton_Click" Style="{StaticResource ActionButtonStyle}" Width="240" Height="42" Margin="0" Padding="0" Background="White" BorderThickness="1" BorderBrush="#EEEEEE" VerticalAlignment="Center">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <Image Source="/Images/fb.png" Width="20" Height="20" Margin="0,0,8,0" VerticalAlignment="Center"/>
-                            <TextBlock Text="Lê Minh Đức" FontWeight="SemiBold" Foreground="Black" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </Button>
-                    <Button Click="TuanHai_Click" Style="{StaticResource ActionButtonStyle}" Width="180" Height="42" Margin="0" Padding="0" Background="White" BorderThickness="1" BorderBrush="#EEEEEE" VerticalAlignment="Center">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                             <Image Source="/Images/fb.png" Width="20" Height="20" Margin="0,0,8,0" VerticalAlignment="Center"/>
-                             <TextBlock Text="Tuan Hai" FontWeight="SemiBold" Foreground="Black" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </Button>
-                    <Button Click="ZitTechLab_Click" Style="{StaticResource ActionButtonStyle}" Width="180" Height="42" Margin="20,0,0,0" Padding="0" Background="White" BorderThickness="1" BorderBrush="#EEEEEE" VerticalAlignment="Center">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                             <Image Source="/Images/fb.png" Width="20" Height="20" Margin="0,0,8,0" VerticalAlignment="Center"/>
-                             <TextBlock Text="Zịt's Tech Lab" FontWeight="SemiBold" Foreground="Black" VerticalAlignment="Center"/>
+                             <TextBlock FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" Text="&#xE774;" FontSize="18" Foreground="#059669" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                             <TextBlock Text="Việt.HVQ - I.T department" FontWeight="SemiBold" Foreground="Black" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>
@@ -131,7 +118,7 @@
                 <TextBlock x:Name="lblHowToActivate" Text="How to activate HyperLis?" FontSize="28" FontWeight="SemiBold" Margin="0,0,0,15"/>
                 <StackPanel Margin="0,0,0,30">
                     <TextBlock x:Name="lblActivateStep1" Text="1. Click the button below to grab your activation code." FontSize="15" Foreground="#333" Margin="0,0,0,10" TextWrapping="Wrap"/>
-                    <TextBlock x:Name="lblActivateStep2" Text="2. Copy that code and send it to the Zịt Tech Lab page or one of the two admins listed in the contact section." FontSize="15" Foreground="#333" Margin="0,0,0,10" TextWrapping="Wrap"/>
+                    <TextBlock x:Name="lblActivateStep2" Text="2. Copy that code and send it to Việt.HVQ - I.T department via viethvq.name.vn." FontSize="15" Foreground="#333" Margin="0,0,0,10" TextWrapping="Wrap"/>
                     <TextBlock x:Name="lblActivateStep3" Text="3. We'll send you an activation key, a confirmation email, and all the info tied to your purchase — proof that you're officially in!" FontSize="15" Foreground="#333" Margin="0,0,0,15" TextWrapping="Wrap"/>
 
                     <TextBlock x:Name="lblGoodToKnow" Text="⚡ Good to know:" FontWeight="Bold" FontSize="15" Margin="0,0,0,5" Foreground="#CA8A04"/>

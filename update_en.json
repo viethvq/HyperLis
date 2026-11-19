@@ -1,7 +1,7 @@
 {
   "version": "1.0.7",
   "release_date": "05-11-2026",
-  "download_url_setup": "https://github.com/ZitTechLab/HyperLis/releases/download/updatev1.0.7/HyperLis_Setup_v1.0.7.exe",
+  "download_url_setup": "",
   "content": [
             "Refined UI for Dashboard, License Management, and UWP Apps.",
             "Updated new optimization algorithm for Gaming.",

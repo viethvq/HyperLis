@@ -1,80 +1,79 @@
 # HyperLis
 
-A Software for IT Support
+Bộ công cụ hỗ trợ kỹ thuật I.T & Tối ưu hóa hệ điều hành Windows.
 
-- **Website:** https://zittechlab.com/
-- **Fanpage:** https://www.facebook.com/ZitTechLab
+- **Tác giả / Phát triển:** Việt.HVQ - I.T department
+- **Website chính thức:** [https://viethvq.name.vn](https://viethvq.name.vn)
+- **GitHub Repository:** [https://github.com/viethvq/HyperLis](https://github.com/viethvq/HyperLis)
+- **Bản quyền:** Copyright © 2026 Việt.HVQ - I.T department. All rights reserved.
 
-## Source Code & Licensing
+---
 
-HyperLis is a **source-available Windows optimization and IT helpdesk software project**, developed and maintained by the HyperLis Development Team.
+## 1. Yêu cầu môi trường & Công cụ
 
-We believe in sharing technical knowledge and encouraging developers, students, and enthusiasts to explore Windows optimization, system management, and software engineering.
+- **Hệ điều hành:** Windows 10 / 11 (yêu cầu quyền **Administrator**).
+- **Nền tảng:** .NET 9.0 SDK / Desktop Runtime (`net9.0-windows`).
+- **Kiến trúc:** `win-x64`.
+- **Công cụ đóng gói (Tùy chọn):** [Inno Setup 6](https://jrsoftware.org/isdl.php) (cần thiết nếu muốn tạo bộ cài đặt `.exe`).
 
-For this reason, selected HyperLis source code is publicly accessible for educational and personal research purposes.
+---
 
-However, **publicly accessible source code does not mean unrestricted use, redistribution, or commercial exploitation.**
+## 2. Hướng dẫn Build & Đóng gói
 
-### License
+Dự án đã tích hợp sẵn script tự động hóa toàn bộ quy trình:
 
-HyperLis is distributed under the **HyperLis Source-Available License v1.0 (HSAL-1.0)**.
+1. Mở PowerShell hoặc Command Prompt tại thư mục gốc dự án.
+2. Chạy lệnh:
+   ```cmd
+   .\build.bat
+   ```
+3. Script sẽ tự động:
+   - Restore các NuGet packages từ nguồn chuẩn.
+   - Clean các bản build cũ.
+   - Publish bản Release theo kiến trúc `win-x64`.
+   - Tìm kiếm công cụ Inno Setup trên máy và đóng gói file installer hoàn chỉnh vào thư mục `Output/`.
 
-This is a custom, non-commercial, source-available license. It is not an OSI-approved open-source license.
+---
 
-The complete license terms are available in [LICENSE.md](LICENSE.md).
+## 3. Cơ chế Cập nhật tự động (Auto-Update Mechanism)
 
-### Permissions & Restrictions
+Ứng dụng **không đọc trực tiếp từ trang web Releases**, mà kiểm tra phiên bản mới thông qua 2 tệp cấu hình JSON lưu trên nhánh `main` của repository:
 
-| Activity | Permission |
-|---|---|
-| View and study the source code | ✅ Permitted |
-| Clone the repository for personal learning | ✅ Permitted |
-| Compile and test privately for non-commercial purposes | ✅ Permitted |
-| Modify the code for private experimentation | ✅ Permitted |
-| Report bugs and suggest improvements | ✅ Permitted |
-| Fork using GitHub's permitted functionality | ✅ Permitted |
-| Redistribute HyperLis or modified versions | 🔒 Written authorization required |
-| Incorporate protected HyperLis code into other distributed products | 🔒 Written authorization required |
-| Use protected HyperLis materials commercially | 🔒 Commercial license required |
-| Rebrand and distribute protected HyperLis derivatives | 🔒 Written authorization required |
-| Use protected HyperLis branding commercially | 🔒 Authorization may be required |
+- **Bản tiếng Anh:** `https://raw.githubusercontent.com/viethvq/HyperLis/main/update_en.json`
+- **Bản tiếng Việt:** `https://raw.githubusercontent.com/viethvq/HyperLis/main/update_vn.json`
 
-Permissions are subject to the full license, applicable third-party licenses, GitHub's Terms of Service, and applicable law.
+### Luồng hoạt động của tính năng Check Update:
+1. **Kiểm tra phiên bản:** Ứng dụng đọc trường `version` trong tệp JSON tương ứng với ngôn ngữ đang dùng và so sánh với phiên bản đang chạy.
+2. **Hiển thị thông báo:** Nếu có bản mới hơn, hiển thị cửa sổ cập nhật cùng các nội dung thay đổi (`content`).
+3. **Tải bộ cài đặt:** Khi nhấn **Update Now**, ứng dụng sẽ tự động tải file `.exe` cài đặt từ URL cấu hình ở trường `download_url_setup` trong file JSON.
+4. **Xem chi tiết:** Nút *View full changelog on GitHub* sẽ mở trang Releases chính thức: [https://github.com/viethvq/HyperLis/releases](https://github.com/viethvq/HyperLis/releases).
 
-### Intellectual Property & Original Features
+---
 
-HyperLis includes original software components, feature implementations, interface designs, project-specific terminology, and branding developed by the HyperLis Development Team.
+## 4. Hướng dẫn phát hành phiên bản mới (Release Workflow)
 
-We reserve applicable rights in our protected original materials, including distinctive project and feature identifiers.
+Khi có bản cập nhật mới (ví dụ từ `v1.0.7` lên `v1.0.8`):
 
-**Commercial exploitation of protected HyperLis source code, original feature implementations, or other protected project materials requires prior written authorization from the relevant rights holder.**
+1. **Build bộ cài mới:**
+   Chạy `.\build.bat` để tạo file installer trong thư mục `Output/` (ví dụ: `HyperLis_Setup_v1.0.8_NoDotNet.exe`).
+2. **Tạo Release trên GitHub:**
+   - Truy cập: `https://github.com/viethvq/HyperLis/releases/new`
+   - Đặt Tag và Title (ví dụ: `v1.0.8`).
+   - Đính kèm file installer vừa tạo vào mục Attach binaries.
+   - Bấm **Publish release**.
+3. **Lấy link tải file cài đặt:**
+   Sao chép link tải trực tiếp của file `.exe` vừa tải lên mục Release (ví dụ: `https://github.com/viethvq/HyperLis/releases/download/v1.0.8/HyperLis_Setup_v1.0.8_NoDotNet.exe`).
+4. **Cập nhật 2 file JSON trên repo:**
+   Mở `update_en.json` và `update_vn.json`:
+   - Sửa `"version": "1.0.8"`
+   - Dán link tải vào `"download_url_setup"`
+   - Viết các gạch đầu dòng tính năng mới vào mục `"content"`
+5. **Commit & Push lên nhánh main:**
+   Sau khi push, người dùng ứng dụng nhấn **Check Update** sẽ lập tức nhận diện và tự tải bản `v1.0.8` về cài đặt.
 
-This policy does not claim exclusive ownership of general ideas, common technical methods, standard feature descriptions, or independently developed software with similar functionality.
+---
 
-Additional information about identified project elements may be provided in [PROTECTED_ELEMENTS.md](PROTECTED_ELEMENTS.md).
+## 5. Giấy phép sử dụng
 
-### Commercial Licensing
-
-Interested in integrating protected HyperLis components into a commercial project, software product, or service?
-
-Please contact the HyperLis Development Team to discuss commercial licensing and special permissions.
-
-**Contact:** https://www.facebook.com/ZitTechLab/
-
-Commercial permission must be granted through a separate written agreement.
-
-### Third-Party Software
-
-HyperLis may incorporate or interact with third-party tools and libraries governed by their respective licenses.
-
-The HyperLis Source-Available License does not override third-party licensing terms.
-
-Please refer to [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), where applicable.
-
-### Copyright Notice
-
-Copyright © 2026 Zịt's Tech Lab. All rights reserved.
-
-**HyperLis — Everything runs smoothly.**
-
-Unauthorized commercial exploitation, redistribution, or use of protected HyperLis materials beyond the permissions granted by HSAL-1.0 is prohibited, subject to applicable law and third-party rights.
+Phần mềm được phát triển cho mục đích hỗ trợ kỹ thuật I.T, tối ưu hóa hệ điều hành và nghiên cứu học tập cá nhân.
+Mọi chi tiết xin liên hệ: [https://viethvq.name.vn](https://viethvq.name.vn).
